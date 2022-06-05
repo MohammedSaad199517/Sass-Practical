@@ -1,0 +1,98 @@
+header{
+    border-bottom: solid 1px $blackColor50;
+    .container{
+        position: relative;
+        padding-top: 20px ;
+        padding-bottom:20px ;
+        display: flex;
+        justify-content: space-between;
+        .menu{
+            font-size: xx-large;
+            color: $redColor;
+            cursor: pointer;
+            @include md{
+                &{
+                    display: none;
+                }
+            }
+        }
+        .logo{
+            h2{
+                margin-bottom: 0;
+                .huge-letter{
+                    font-size: 40px;
+                    margin-bottom: 0;
+                }
+            }
+            small{
+                color: $blackColor50;
+            }
+        }
+        .nav-bar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            background-color: $redColor;
+            color: $whiteColor;
+            @media (max-width:767px) {
+                &{
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    top:80px;
+                    padding-top: 20px;
+                    border-radius: 0px;
+                    -webkit-border-radius: 0px;
+                    -moz-border-radius: 0px;
+                    -ms-border-radius: 0px;
+                    -o-border-radius: 0px;
+                    li{
+                        margin-bottom: 20px;
+                        margin-left: 0 !important;
+                    }                   
+                }
+            @include xs{
+                &{
+                    right: 2%;
+                }
+            }
+            @include sm{
+                &{
+                    right:0;
+                }
+            }
+                &::before{
+                    content: "";
+                    @include ArrowNavBar($redColor, 10px)
+                }
+            }
+            li>a{
+                text-transform:uppercase;
+                color: $whiteColor;
+                transition: all 0.3s;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -ms-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                margin-left: 10px;
+                &:hover{
+                    color: rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+        @media (max-width:767px) {
+            &{
+                align-items: center;
+            }
+        }
+    }
+}
+.open-menu{
+    display: flex !important;
+}

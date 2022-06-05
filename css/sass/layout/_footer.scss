@@ -1,0 +1,123 @@
+footer{
+    background-color: $sectionColor;
+    padding-top:$paddingSections;
+    @media (max-width:575px) {
+        text-align: center;
+    }
+    .container{
+        .content{
+            margin-bottom: 20px;
+            display: grid;
+            @include xs {
+                &{
+                    grid-template-columns:  100%;
+                    grid-template-rows: auto auto auto;
+                }
+            }
+            @include sm{
+                &{
+                    grid-template-columns:  50% 50%;
+                    grid-template-rows: auto auto;
+                }
+                >.box:first-of-type{
+                    
+                    grid-column: span 2;
+                }
+            }
+            @include lg{
+                grid-template-columns: 50% 25% 25%;
+                >.box:first-of-type{
+                    
+                    grid-column: 1;
+                }
+            }
+            .box{
+                padding: 20px;
+                .head-footer{
+                    color: $greyColor;
+                    text-transform: capitalize;
+                }
+                .content-box{
+                    img{
+                        max-width: 120px;
+                        height: 100px;
+                        border: 1px solid ;
+                        background-color: #fff;
+                        padding: 2px;
+                    }
+                    .info{
+                        display: flex;
+                        align-items: center;
+                        .description{
+                            margin-left: 20px;
+                            color: $paragraphColor
+                        }
+                        @media (max-width:575px) {
+                            &{
+                                flex-direction: column;
+                            }
+                           
+                        }
+                    }
+                }
+                .cotact{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    textarea{
+                        height: 90px;
+                    }
+                    input:not(input[type="submit"]), 
+                    textarea{
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
+                    input:not(input[type="submit"]):focus, 
+                    textarea:focus{
+                        outline: none;
+                    }
+                    input:not(input[type="submit"])::placeholder, 
+                    textarea::placeholder {
+                        transition: all 0.3s;
+                        -webkit-transition: all 0.3s;
+                        -moz-transition: all 0.3s;
+                        -ms-transition: all 0.3s;
+                        -o-transition: all 0.3s;
+                    }
+                    input:not(input[type="submit"]):focus::placeholder, 
+                    textarea:focus::placeholder {
+                        opacity:0;
+                    }
+                    input[type="submit"]{
+                        background-color: $redColor;
+                        margin-right: auto;
+                        border: none;
+                        color: $whiteColor;
+                        text-transform: uppercase;
+                        padding: 5px 10px;
+                        border-radius: 6px;
+                        -webkit-border-radius: 6px;
+                        -moz-border-radius: 6px;
+                        -ms-border-radius: 6px;
+                        -o-border-radius: 6px;
+                        cursor: pointer;
+                    }
+                }
+                .company-details{
+                    color: $paragraphColor;
+                    padding:0;
+                }
+                .date{
+                    color: $paragraphColor;
+                }
+            }
+        }
+        .copyright{
+            border-top: 1px solid #b5b2b2;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            color: $paragraphColor;
+        }
+    }
+}

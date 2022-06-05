@@ -1,0 +1,190 @@
+.landing{
+    .container{
+        .quote{
+            padding:30px 0;
+            color: $greyColor;
+            max-width: 700px;
+            margin: auto;
+            font-size: 25px;
+            text-align: center;
+            line-height: 1.5;
+            font-style: italic;
+            
+        }
+        %icon{
+            position:absolute;
+            top:50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            font-size: 30px;
+            cursor: pointer;
+            color: $whiteColor
+        }
+        .slider{
+            text-align: center;
+            position: relative;
+            .icon-right,
+            .icon-left{
+                @extend %icon;
+            }
+            .icon-right{
+                right:10%;
+            }
+            .icon-left{
+                left:10%;
+            }
+            .icon-left:hover,
+            .icon-right:hover{
+                color: $redColor;
+            }
+            img{
+                max-width: 100%;
+            }
+            .bullets-container{
+                position: absolute;
+                left: 50%;
+                bottom: -20px;
+                display: flex;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+                .bullet{
+                    width: 20px;
+                    margin-left: 10px;
+                    height: 20px;
+                    background-color: red;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                   
+}
+            }
+        }
+    }
+}
+.active-bullet{
+    background-color: $whiteColor !important;
+    border: solid 1px $redColor;
+}
+
+
+
+//---------------------------------------
+.services{
+    margin-top: 30px;
+    padding: 30px 0;
+    .container{
+        .content{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+            gap: 20px;
+            .box{
+                
+                padding:20px 0;
+                max-width: 300px;
+                margin: auto;
+                
+                @media (max-width:575px) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                .head{
+                    color: $greyColor;
+                    display: flex;
+                    align-items: center;
+           
+                    
+                    .head-sevice{
+                        margin-left: 10px;
+                        
+                    }
+                    i{
+                        font-size: 25px;
+                    }
+                }
+                p{
+                    color: $greyColor;
+                    line-height: 1.5;
+                  
+                }
+                .read-more{
+                    color: $redColor;
+                    
+                   
+                }
+             
+                    
+                
+            }
+        }
+
+    }
+    
+}
+
+.players{
+    padding: $paddingSections 0;
+    .container{
+        .content{
+           
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+            gap: 20px;
+            .box{
+                margin: auto;
+                max-width: 250px;
+                
+                .player-name{
+                    small{
+                        color: $greyColor;
+                    }
+                }
+                .image{
+                    width: 250px;
+                    height: 250px;
+                    overflow: hidden;
+                    img{
+                        max-width:250px ;
+                    }
+                }
+                p{
+                    line-height: 1.5;
+                    color: $greyColor;
+                
+                }
+                .view-profile{
+                    color: $redColor;
+                }
+        
+            }
+        }
+    }
+}
+//----------------------------
+.lorem{
+    padding: $paddingSections 0;
+    .container{
+        .content{
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+            gap: 20px;
+            .image{
+                img{
+                    max-width: 100%;
+                    height: 160px;
+                }
+            }
+        }
+    }
+}

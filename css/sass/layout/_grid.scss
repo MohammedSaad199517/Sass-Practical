@@ -1,0 +1,21 @@
+.container{
+    @include xs{
+        width: 100%;
+    }
+    @include sm{
+        width: 540px;
+    }
+    @include md{
+        width: 740px;
+    }
+    @include lg{
+        width:970px ;
+    }
+    @include xl{
+        width:1170px ;
+    }
+    &{
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
